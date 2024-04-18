@@ -1,5 +1,5 @@
 {
-    "version": "4.0.2",
+    "version": "4.0.3",
     "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
     "packages": [
         "packages/*"
@@ -8,7 +8,6 @@
     "useWorkspaces": true,
     "command": {
         "publish": {
-            "access": "public",
             "cleanupTempFiles": true,
             "removePackageFields": [
                 "devDependencies",
@@ -28,5 +27,8 @@
         "**/__fixtures__/**",
         "**/__tests__/**",
         "**/*.md"
-    ]
+    ],
+    "publishConfig": {
+        "access": "public"
+    }
 }

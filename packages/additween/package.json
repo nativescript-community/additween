@@ -1,6 +1,6 @@
 {
     "name": "@nativescript-community/additween",
-    "version": "4.0.2",
+    "version": "4.0.3",
     "description": "Additive tweening library for smooth animations",
     "main": "./index",
     "sideEffects": false,
@@ -31,5 +31,5 @@
     },
     "license": "Apache-2.0",
     "readmeFilename": "README.md",
-    "gitHead": "dcd1d999f1dd70f8ee227e4af28cdd6bc03c3fca"
+    "gitHead": "46cb8bafbf9e2e45cb2715c136eb11767e1a27a3"
 }
