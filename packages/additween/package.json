@@ -1,10 +1,20 @@
 {
     "name": "@nativescript-community/additween",
-    "version": "4.0.4",
+    "version": "4.0.0",
     "description": "Additive tweening library for smooth animations",
     "main": "./index",
     "sideEffects": false,
     "typings": "./index.d.ts",
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "npm run tsc",
+        "build.all": "npm run build",
+        "readme": "readme generate -c ../../tools/readme/blueprint.json",
+        "tsc": "cpy '**/*.d.ts' '../../packages/additween' --parents --cwd=../../src/additween && tsc -skipLibCheck -d",
+        "clean": "rimraf ./*.d.ts ./*.js ./*.js.map"
+    },
     "nativescript": {
         "platforms": {
             "android": "6.0.0",
@@ -30,9 +40,5 @@
         "url": "https://github.com/nativescript-community/additween"
     },
     "license": "Apache-2.0",
-    "readmeFilename": "README.md",
-    "publishConfig": {
-        "access": "public"
-    },
-    "gitHead": "48072fc5564bf3063d627c4c4065ebc719ab7813"
+    "readmeFilename": "README.md"
 }

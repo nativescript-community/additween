@@ -1,4 +1,3 @@
-import { getCurrentTime } from "./getCurrentTime";
 import { PlainObjectReducer } from "./PlainObjectReducer";
 import type { IStateReducer } from "./PlainObjectReducer";
 
@@ -181,8 +180,11 @@ export class AdditiveTweening<T extends Record<string, number>> {
     scheduleAnimationFrame(cb: () => void): number {
         return window.requestAnimationFrame(cb);
     }
-
+    _now:()=>number;
     now(): number {
-        return getCurrentTime();
+        if (!this._now) {
+            this._now =  window.performance?.now || Date.now
+        }
+        return this._now();
     }
 }

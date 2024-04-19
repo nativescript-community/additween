@@ -1,3 +1,0 @@
-{
-  "extends": ["github>bhovhannes/shared-config//renovate/default"]
-}
