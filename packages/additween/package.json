@@ -1,6 +1,6 @@
 {
     "name": "@nativescript-community/additween",
-    "version": "4.0.5",
+    "version": "4.0.6",
     "description": "Additive tweening library for smooth animations",
     "main": "./index",
     "sideEffects": false,
