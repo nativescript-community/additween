@@ -14,6 +14,19 @@
             "ios": "6.0.0"
         }
     },
+    "scripts": {
+        "tsc": "tsc -d",
+        "tsc-win": "cpy ..\\..\\src\\additween\\index.d.ts .\\ && tsc -d",
+        "readme": "readme generate -c ../../tools/readme/blueprint.json",
+        "build": "npm run tsc",
+        "build.watch": "npm run tsc -- -w",
+        "build.win": "npm run tsc-win",
+        "build.all": "npm run build",
+        "build.all.win": "npm run build.win",
+        "build.angular": "ng-packagr -p ../../src/additween/angular/ng-package.json -c ../../src/additween/angular/tsconfig.json && rm angular/.npmignore",
+        "build.angular.win": "ng-packagr -p ..\\..\\src\\additween\\angular\\package.json -c ..\\..\\src\\additween\\angular\\tsconfig.json",
+        "clean": "rimraf ./*.d.ts ./*.js ./*.js.map"
+    },
     "keywords": [
         "additive",
         "tweening",
